@@ -41,7 +41,7 @@ This command lists all groups a user is part of and prints out a list of room na
 curl -k -H "X-Auth-Token: myauthtoken" \
     -H "X-User-Id: myuserid" \
     https://yourrocketchatserver.org/api/v1/groups.list | \
-    jq -r '.groups[] | .name'
+jq -r '.groups[] | .name'
 ```
 
 
