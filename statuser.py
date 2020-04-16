@@ -29,13 +29,8 @@ else:
 response = requests.get(uri, headers=headers, verify=verify)
 response_parsed = json.loads(response.content)
 
-# This is for testing. Read json in from a file instead of the web.
-with open('roomusers_a25.json', 'r') as f:
-    response_parsed = json.load(f)
-
 # select just "members" from web request response
 users = response_parsed['members']
-
 
 # Output to file section
 filename = "status_" + str(datetime.now().year) + str(datetime.now().month) + str(datetime.now().day) + ".csv"
